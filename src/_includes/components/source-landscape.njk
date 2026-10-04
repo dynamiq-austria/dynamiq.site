@@ -1,0 +1,22 @@
+<div class="source-landscape" aria-label="{{ sourceGroupsAria or copy.sourcesAria }}">
+  {% for source in sourceGroups or home.sourceGroups %}
+    <article class="source-space{% if source.featured %} source-space--featured{% endif %}">
+      <header class="source-space__header">
+        <span class="source-space__number" aria-hidden="true">{{ source.number }}</span>
+        <h3>{{ source.title }}</h3>
+      </header>
+      <ul class="source-space__examples" aria-label="{{ copy.examplesFor }} {{ source.title }}">
+        {% for example in source.examples %}
+          {% if example.capability %}
+            <li class="source-space__example--interactive" tabindex="0" aria-label="{{ example.name }}: {{ example.capability }}">
+              <span class="source-space__platform">{{ example.name }}</span>
+              <span class="source-space__capability" aria-hidden="true">{{ example.capability }}</span>
+            </li>
+          {% else %}
+            <li>{{ example }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </article>
+  {% endfor %}
+</div>

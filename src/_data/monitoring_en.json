@@ -1,0 +1,337 @@
+{
+  "meta": {
+    "title": "Monitoring for Web, Social Media & Data | dynamiq.",
+    "description": "dynamiq. builds monitoring systems for the web, social media, communities and data. Detect changes, emerging narratives and relevant signals."
+  },
+  "copy": {
+    "hero": {
+      "heading": [
+        "Don't watch",
+        "everything."
+      ],
+      "accent": [
+        "Recognise",
+        "what matters."
+      ],
+      "lead": "Markets change. Competitors reposition themselves. Discussions emerge on new platforms. Narratives gain reach.",
+      "text": "dynamiq. monitors the sources relevant to your question and makes change systematically measurable.",
+      "processLabel": "How it works"
+    },
+    "feed": {
+      "example": "Example",
+      "aria": "Examples of detected monitoring signals",
+      "footer": "Source collected. Change detected. Signal delivered."
+    },
+    "signals": {
+      "kicker": "Relevant changes",
+      "heading": "Don't watch everything.",
+      "accent": "Recognise what matters.",
+      "introOne": "Monitoring at dynamiq. starts with a question, not a keyword list.",
+      "introTwo": "First, we define which changes matter to your decision. Then we collect the right sources regularly and check them for those specific signals.",
+      "example": "For example"
+    },
+    "process": {
+      "kicker": "How monitoring works",
+      "heading": "From a question",
+      "accent": "to continuous monitoring.",
+      "aria": "The monitoring process in five steps",
+      "note": "Your question determines the sources, collection frequency and detection criteria. The output fits your workflow."
+    },
+    "sources": {
+      "kicker": "Sources",
+      "heading": "Monitoring across",
+      "accent": "different sources.",
+      "intro": "A relevant signal rarely emerges in just one place.",
+      "aria": "Sources for a custom monitoring system",
+      "ownedHeading": "Your own data",
+      "ownedExamples": "APIs · databases · existing datasets · internal data sources",
+      "ownedText": "Data monitoring can also build on data you already collect or provide for analysis.",
+      "connectionHeading": "Sources can be connected.",
+      "connectionText": "A signal on TikTok can be analysed alongside changes on a website, discussions on Reddit or existing company data."
+    },
+    "outputs": {
+      "kicker": "Output",
+      "heading": "Monitoring doesn't have to mean",
+      "accent": "another dashboard.",
+      "intro": "A signal is useful when it reaches the right team. We deliver results in the format you need for your work."
+    },
+    "context": {
+      "kicker": "Context beyond counts",
+      "heading": "Go beyond",
+      "accent": "counting mentions.",
+      "baselinePrompt": "Traditional monitoring often answers questions such as:",
+      "baselineQuestion": "How often was our brand mentioned?",
+      "questionsPrompt": "dynamiq. also asks:",
+      "result": "Individual observations",
+      "resultAccent": "become a reliable picture."
+    },
+    "teams": {
+      "kicker": "Teams & questions",
+      "heading": "Monitoring for",
+      "accent": "different questions."
+    },
+    "custom": {
+      "heading": "When standard software",
+      "accent": "isn't enough.",
+      "paragraphs": [
+        "Not every monitoring question can be answered with an existing SaaS tool.",
+        "Sometimes specific sources need to be collected, unusual signals defined or different datasets connected.",
+        "In those cases, we build the collection, analysis and monitoring pipeline ourselves. A custom monitoring system designed around your question."
+      ],
+      "scope": "From a single automated watcher",
+      "scopeAccent": "to an internal intelligence system.",
+      "architectureLabel": "System Architecture / Example"
+    },
+    "contact": {
+      "label": "Discuss monitoring",
+      "heading": "What would you like",
+      "accent": "to monitor?",
+      "introOne": "Tell us the question, source or signal that matters to you.",
+      "introTwo": "Together, we work out which data is needed and what a useful monitoring setup could look like.",
+      "examplesAria": "Possible topics for your monitoring",
+      "emailSubject": "Monitoring enquiry",
+      "help": "Describe the question, source or signal you want to monitor. Existing data and your desired outcome help us understand the scope."
+    }
+  },
+  "signals": [
+    {
+      "time": "14:02",
+      "source": "competitor.example/pricing",
+      "label": "Pricing changed",
+      "detail": "€49 → €59",
+      "type": "WEB"
+    },
+    {
+      "time": "14:07",
+      "source": "Reddit / Product discussion",
+      "label": "Discussion velocity +184 %",
+      "detail": "An unusual increase in activity",
+      "type": "COMMUNITY"
+    },
+    {
+      "time": "14:13",
+      "source": "TikTok",
+      "label": "Recurring narrative detected",
+      "detail": "An argument appears in new videos",
+      "type": "SOCIAL"
+    },
+    {
+      "time": "14:21",
+      "source": "competitor.example",
+      "label": "New product page detected",
+      "detail": "A new offering appears on the website",
+      "type": "WEB"
+    }
+  ],
+  "categories": [
+    {
+      "number": "01",
+      "label": "Competitors",
+      "type": "Competitive Monitoring",
+      "text": "Detect new products, price changes, positioning, campaigns and strategic shifts.",
+      "example": "A competitor changes its pricing."
+    },
+    {
+      "number": "02",
+      "label": "Brands & communications",
+      "type": "Brand Monitoring",
+      "text": "Track where brands, products and topics appear, and in which contexts.",
+      "example": "A brand appears in a new context."
+    },
+    {
+      "number": "03",
+      "label": "Narratives & topics",
+      "type": "Intelligence Monitoring",
+      "text": "Identify emerging discussions, recurring arguments and the actors spreading them.",
+      "example": "A narrative gains reach across multiple sources."
+    },
+    {
+      "number": "04",
+      "label": "Platforms & communities",
+      "type": "Social Media Monitoring",
+      "text": "Identify new accounts, videos, posts, comments and communities, and track how they develop over time.",
+      "example": "A new TikTok account becomes relevant to a topic."
+    },
+    {
+      "number": "05",
+      "label": "Websites",
+      "type": "Web Monitoring",
+      "text": "Check content, offers, documents and defined website sections for changes.",
+      "example": "A product page or document changes."
+    },
+    {
+      "number": "06",
+      "label": "Markets & trends",
+      "type": "Market Monitoring",
+      "text": "Observe which products, categories, actors and topics gain or lose attention.",
+      "example": "A product gains attention in several communities."
+    }
+  ],
+  "pipeline": [
+    {
+      "number": "01",
+      "label": "Define",
+      "question": "What do we want to detect?",
+      "text": "Define the question, relevant sources and specific signals."
+    },
+    {
+      "number": "02",
+      "label": "Collect",
+      "question": "Which data do we need?",
+      "text": "Collect publicly accessible or provided data regularly and store it in a structured format."
+    },
+    {
+      "number": "03",
+      "label": "Analyze",
+      "question": "What is happening in the data?",
+      "text": "Analyse text, video, metadata, entities, networks and developments over time."
+    },
+    {
+      "number": "04",
+      "label": "Detect",
+      "question": "What has changed?",
+      "text": "Identify new actors, unusual developments, recurring narratives and other defined events."
+    },
+    {
+      "number": "05",
+      "label": "Deliver",
+      "question": "What does the team need to know?",
+      "text": "Deliver results as alerts, dashboards, reports, search systems, datasets or APIs."
+    }
+  ],
+  "sourceGroups": [
+    {
+      "number": "01",
+      "title": "Social Media",
+      "featured": true,
+      "examples": [
+        "TikTok",
+        "Instagram",
+        "YouTube",
+        "Reddit",
+        "X",
+        "LinkedIn",
+        "Facebook",
+        "Threads"
+      ]
+    },
+    {
+      "number": "02",
+      "title": "Communities",
+      "examples": [
+        "Forums",
+        "public Telegram channels",
+        "public Discord communities",
+        "Imageboards",
+        "niche platforms"
+      ]
+    },
+    {
+      "number": "03",
+      "title": "Web",
+      "examples": [
+        "Websites",
+        "Blogs",
+        "public databases",
+        "Web archives",
+        "public dark web sources"
+      ]
+    },
+    {
+      "number": "04",
+      "title": "Video, audio & documents",
+      "examples": [
+        "Videos",
+        "Livestreams",
+        "Podcasts",
+        "PDFs",
+        "Reports",
+        "Presentations",
+        "Spreadsheets"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "number": "01",
+      "label": "Alerts",
+      "format": "EVENT → NOTIFICATION",
+      "text": "Notifications when defined events or changes occur. Exactly when a signal becomes relevant."
+    },
+    {
+      "number": "02",
+      "label": "Dashboards",
+      "format": "SIGNALS → OVERVIEW",
+      "text": "An ongoing view of relevant developments, with timelines and the context of the underlying sources."
+    },
+    {
+      "number": "03",
+      "label": "Reports",
+      "format": "OBSERVATIONS → CONTEXT",
+      "text": "Regular summaries with interpretation: what has changed, and what does it mean for your question?"
+    },
+    {
+      "number": "04",
+      "label": "Search",
+      "format": "ARCHIVE → SEARCH",
+      "text": "Searchable archives and intelligence databases for tracing content, actors and developments."
+    },
+    {
+      "number": "05",
+      "label": "API",
+      "format": "STRUCTURED DATA → SYSTEMS",
+      "text": "Structured data and detected events for existing systems, internal tools and your own workflows."
+    },
+    {
+      "number": "06",
+      "label": "Raw Data",
+      "format": "CSV / JSON / DATABASE",
+      "text": "Datasets as CSV, JSON, databases or other machine-readable formats for your own analysis."
+    }
+  ],
+  "questions": [
+    "Where does it appear?",
+    "In which context?",
+    "Which actors drive the discussion?",
+    "Which topics appear together?",
+    "What changes over time?",
+    "Is the development unusual?"
+  ],
+  "teams": [
+    {
+      "number": "01",
+      "label": "Strategy & Competitive Intelligence",
+      "text": "Monitor competitors, markets, products and positioning. Identify changes that matter to strategic decisions."
+    },
+    {
+      "number": "02",
+      "label": "Brand & Communications",
+      "text": "Track brand perception, discussions, narratives and relevant actors. Understand visibility in context."
+    },
+    {
+      "number": "03",
+      "label": "Market & Consumer Intelligence",
+      "text": "Identify products, trends, needs and changes. Interpret developments across platforms and time periods."
+    },
+    {
+      "number": "04",
+      "label": "Research & Investigations",
+      "text": "Document and investigate actors, networks, content and sources over extended periods. Connect observations in a traceable way."
+    }
+  ],
+  "architecture": [
+    "Sources",
+    "Collectors",
+    "Data Layer",
+    "Analysis",
+    "Detection"
+  ],
+  "contactExamples": [
+    "Competitors",
+    "Brands",
+    "Platforms",
+    "Narratives",
+    "Websites",
+    "Markets"
+  ]
+}

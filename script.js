@@ -5,6 +5,20 @@
   const menuLabel = document.querySelector('[data-menu-label]');
   const menuOpenLabel = menuToggle?.dataset.openLabel || 'Menü öffnen';
   const menuCloseLabel = menuToggle?.dataset.closeLabel || 'Menü schließen';
+  const menuRegions = [...document.querySelectorAll('main, .site-footer, .skip-link')];
+  const menuRegionStates = new Map();
+
+  const setMenuRegionsInert = (isOpen) => {
+    if (isOpen) {
+      menuRegions.forEach((region) => {
+        menuRegionStates.set(region, region.inert);
+        region.inert = true;
+      });
+    } else {
+      menuRegionStates.forEach((wasInert, region) => { region.inert = wasInert; });
+      menuRegionStates.clear();
+    }
+  };
 
   const closeMenu = ({ returnFocus = false } = {}) => {
     if (!menuToggle || !nav) return;
@@ -12,6 +26,7 @@
     if (menuLabel) menuLabel.textContent = menuOpenLabel;
     nav.classList.remove('is-open');
     document.body.classList.remove('menu-open');
+    setMenuRegionsInert(false);
     if (returnFocus) menuToggle.focus();
   };
 
@@ -21,8 +36,11 @@
     if (menuLabel) menuLabel.textContent = isOpen ? menuOpenLabel : menuCloseLabel;
     nav?.classList.toggle('is-open', !isOpen);
     document.body.classList.toggle('menu-open', !isOpen);
+    setMenuRegionsInert(!isOpen);
 
-    if (!isOpen) nav?.querySelector('a')?.focus();
+    if (!isOpen) requestAnimationFrame(() => {
+      if (menuToggle.getAttribute('aria-expanded') === 'true') nav?.querySelector('a')?.focus();
+    });
   });
 
   nav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
@@ -30,6 +48,18 @@
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && menuToggle?.getAttribute('aria-expanded') === 'true') {
       closeMenu({ returnFocus: true });
+    }
+    if (event.key === 'Tab' && menuToggle?.getAttribute('aria-expanded') === 'true') {
+      const focusable = [...header.querySelectorAll('a[href], button:not([disabled])')]
+        .filter((element) => element.getClientRects().length && getComputedStyle(element).visibility !== 'hidden');
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if ((event.shiftKey && document.activeElement === first)
+        || (!event.shiftKey && document.activeElement === last)
+        || !focusable.includes(document.activeElement)) {
+        event.preventDefault();
+        (event.shiftKey ? last : first)?.focus();
+      }
     }
   });
 

@@ -33,6 +33,8 @@
         {
             "number": "03",
             "label": "Monitoring",
+            "href": "/en/monitoring/",
+            "linkLabel": "Explore monitoring",
             "text": "A one-off investigation becomes a continuous process. Relevant sources are collected regularly and checked for changes, new actors, narratives and other defined signals.",
             "outputs": ["Dashboards", "SaaS", "Interactive Search", "APIs"]
         },

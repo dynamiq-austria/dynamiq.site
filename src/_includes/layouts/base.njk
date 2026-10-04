@@ -11,10 +11,10 @@
   {% if alternatePage %}
     <link rel="alternate" hreflang="{{ 'de' if ui.lang == 'en' else 'en' }}" href="{{ siteUrl }}{{ alternatePage }}">
     <link rel="alternate" hreflang="{{ ui.lang }}" href="{{ siteUrl }}{{ page.url }}">
-    <link rel="alternate" hreflang="x-default" href="{{ siteUrl }}/">
+    <link rel="alternate" hreflang="x-default" href="{{ siteUrl }}{{ xDefaultPage or '/' }}">
   {% endif %}
 
-  {% set socialImage = ogImage or "/assets/og-image-data-intelligence.png" %}
+  {% set socialImage = ogImage or "/assets/og/og-image-data-intelligence.png" %}
   <meta property="og:type" content="website">
   <meta property="og:locale" content="{{ ui.ogLocale }}">
   <meta property="og:site_name" content="dynamiq.">
@@ -22,8 +22,8 @@
   <meta property="og:description" content="{{ ogDescription or description or site.description }}">
   <meta property="og:url" content="{{ siteUrl }}{{ page.url }}">
   <meta property="og:image" content="{{ siteUrl }}{{ socialImage }}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1733">
+  <meta property="og:image:height" content="907">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ title }}">
   <meta name="twitter:description" content="{{ ogDescription or description or site.description }}">
@@ -34,7 +34,7 @@
   <link rel="icon" href="/assets/favicon-32x32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="/styles.css?v=impact-metrics-v2">
+  <link rel="stylesheet" href="/styles.css?v=monitoring-v1">
 
   {% if isHome %}
   <script type="application/ld+json">
@@ -261,6 +261,6 @@
   </main>
 
   {% if showFooter != false %}{% include "components/footer.njk" %}{% endif %}
-  {% if showNavigation %}<script src="/script.js?v=impact-metrics-v2" defer></script>{% endif %}
+  {% if showNavigation %}<script src="/script.js?v=monitoring-v1" defer></script>{% endif %}
 </body>
 </html>

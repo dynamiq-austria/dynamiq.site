@@ -11,7 +11,7 @@ eleventyComputed:
   ogDescription: "{{ localized.ogDescription }}"
   pageLang: "{{ localized.lang }}"
   alternatePage: "{{ localized.alternatePage }}"
-ogImage: /assets/og-image-data-intelligence.png
+ogImage: /assets/og/og-image-data-intelligence.png
 isHome: true
 showNavigation: true
 ---
@@ -114,6 +114,7 @@ showNavigation: true
               {% for output in deliverable.outputs %}<li>{{ output }}</li>{% endfor %}
             </ul>
           </div>
+          {% if deliverable.href %}<a class="text-link deliverable__link" href="{{ deliverable.href }}">{{ deliverable.linkLabel }} <span aria-hidden="true">↗</span></a>{% endif %}
         </li>
       {% endfor %}
     </ol>
@@ -282,28 +283,7 @@ showNavigation: true
       </div>
     </header>
 
-    <div class="source-landscape" aria-label="{{ copy.sourcesAria }}">
-      {% for source in home.sourceGroups %}
-        <article class="source-space{% if source.featured %} source-space--featured{% endif %}">
-          <header class="source-space__header">
-            <span class="source-space__number" aria-hidden="true">{{ source.number }}</span>
-            <h3>{{ source.title }}</h3>
-          </header>
-          <ul class="source-space__examples" aria-label="{{ copy.examplesFor }} {{ source.title }}">
-            {% for example in source.examples %}
-              {% if example.capability %}
-                <li class="source-space__example--interactive" tabindex="0" aria-label="{{ example.name }}: {{ example.capability }}">
-                  <span class="source-space__platform">{{ example.name }}</span>
-                  <span class="source-space__capability" aria-hidden="true">{{ example.capability }}</span>
-                </li>
-              {% else %}
-                <li>{{ example }}</li>
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </article>
-      {% endfor %}
-    </div>
+    {% include "components/source-landscape.njk" %}
 
     <p class="data-sources__connection"><span>{{ copy.sourceConnectionLead }}</span> {{ copy.sourceConnectionText }}</p>
   </div>
@@ -355,37 +335,7 @@ showNavigation: true
         </div>
       </div>
 
-      <form class="contact-form" name="projektanfrage" method="post" action="{{ copy.contactSuccessPath }}" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="projektanfrage">
-        <p class="form-honeypot" hidden><label>{{ copy.honeypot }} <input name="bot-field" type="text"></label></p>
-
-        <div class="form-grid">
-          <div class="field"><label for="name">{{ copy.name }} <span aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required></div>
-          <div class="field"><label for="email">{{ copy.email }} <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
-          <div class="field field-full"><label for="unternehmen">{{ copy.company }}</label><input id="unternehmen" name="unternehmen" type="text" autocomplete="organization"></div>
-          <div class="field">
-            <label for="leistung">{{ copy.serviceLabel }} <span aria-hidden="true">*</span></label>
-            <select id="leistung" name="leistung" required>
-              <option value="">{{ copy.selectPrompt }}</option>
-              {% for option in copy.serviceOptions %}<option value="{{ option.value }}">{{ option.label }}</option>{% endfor %}
-            </select>
-          </div>
-          <div class="field">
-            <label for="budget">{{ copy.budgetLabel }}</label>
-            <select id="budget" name="budget">
-            <option value="">{{ copy.noAnswer }}</option>
-            {% for option in copy.budgetOptions %}<option>{{ option }}</option>{% endfor %}</select>
-          </div>
-          <div class="field field-full"><label for="projekt">{{ copy.projectLabel }} <span aria-hidden="true">*</span></label><textarea id="projekt" name="projekt" rows="6" required aria-describedby="projekt-hilfe"></textarea><span class="form-help" id="projekt-hilfe">{{ copy.projectHelp }}</span></div>
-        </div>
-
-        <div class="consent-field">
-          <input id="datenschutz-zustimmung" name="datenschutz-zustimmung" type="checkbox" value="zugestimmt" required>
-          <label for="datenschutz-zustimmung">{{ copy.contactConsentPrefix }} <a href="{{ ui.privacyPath }}">{{ copy.privacyLink }}</a>. <span aria-hidden="true">*</span></label>
-        </div>
-        <p class="required-note"><span aria-hidden="true">*</span> {{ copy.required }}</p>
-        <button class="button button-dark" type="submit">{{ copy.contactSubmit }}</button>
-      </form>
+      {% include "components/contact-form.njk" %}
     </div>
   </div>
 </section>

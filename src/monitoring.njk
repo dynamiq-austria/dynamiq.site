@@ -1,0 +1,199 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: monitoringPages
+  size: 1
+  alias: localizedMonitoring
+  addAllPagesToCollections: true
+permalink: "{{ localizedMonitoring.permalink }}"
+eleventyComputed:
+  title: "{{ localizedMonitoring.content.meta.title | safe }}"
+  description: "{{ localizedMonitoring.content.meta.description | safe }}"
+  pageLang: "{{ localizedMonitoring.lang }}"
+  alternatePage: "{{ localizedMonitoring.alternatePage }}"
+  contactPath: "#{{ localizedMonitoring.anchors.contact }}"
+  contactLabel: "{{ localizedMonitoring.content.copy.contact.label | safe }}"
+  contactHelp: "{{ localizedMonitoring.content.copy.contact.help | safe }}"
+xDefaultPage: /monitoring/
+ogImage: /assets/og/og-image-monitoring.png
+showNavigation: true
+mainClass: monitoring-page
+contactService: Monitoring
+---
+{% set ui = i18n[localizedMonitoring.lang] %}
+{% set monitoring = localizedMonitoring.content %}
+{% set monitoringCopy = monitoring.copy %}
+{% set monitoringAnchors = localizedMonitoring.anchors %}
+{% set copy = ui.home %}
+
+<section class="monitoring-hero" aria-labelledby="monitoring-title">
+  <div class="monitoring-hero__inner section-shell">
+    <div class="monitoring-hero__copy">
+      <p class="section-kicker">[ Monitoring ]</p>
+      <h1 id="monitoring-title">{% for line in monitoringCopy.hero.heading %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}<span>{% for line in monitoringCopy.hero.accent %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}</span></h1>
+      <p class="monitoring-hero__lead">{{ monitoringCopy.hero.lead }}</p>
+      <p>{{ monitoringCopy.hero.text }}</p>
+      <p class="monitoring-hero__sources">Social · Web · Communities · Video · Documents · Data</p>
+      <div class="monitoring-hero__actions">
+        <a class="button button-dark" href="#{{ monitoringAnchors.contact }}">{{ monitoringCopy.contact.label }} <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="#{{ monitoringAnchors.process }}">{{ monitoringCopy.hero.processLabel }} <span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+
+    <figure class="monitoring-feed" aria-labelledby="signal-feed-caption">
+      <figcaption id="signal-feed-caption" class="monitoring-feed__caption"><span><span class="monitoring-feed__dot" aria-hidden="true"></span> Signal Feed</span><span>{{ monitoringCopy.feed.example }}</span></figcaption>
+      <ol class="monitoring-feed__list" aria-label="{{ monitoringCopy.feed.aria }}">
+        {% for signal in monitoring.signals %}
+          <li class="monitoring-feed__entry">
+            <span class="monitoring-feed__time">{{ signal.time }}</span>
+            <div>
+              <p class="monitoring-feed__source">{{ signal.source }}</p>
+              <p class="monitoring-feed__label">{{ signal.label }}</p>
+              <p class="monitoring-feed__detail">{{ signal.detail }}</p>
+              <span class="monitoring-feed__type">{{ signal.type }}</span>
+            </div>
+          </li>
+        {% endfor %}
+      </ol>
+      <p class="monitoring-feed__footer"><span aria-hidden="true">↳</span> {{ monitoringCopy.feed.footer }}</p>
+    </figure>
+  </div>
+</section>
+
+<section class="monitoring-signals section-shell" aria-labelledby="monitoring-signals-title">
+  <header class="monitoring-intro">
+    <div>
+      <p class="section-kicker">[ {{ monitoringCopy.signals.kicker }} ]</p>
+      <h2 class="monitoring-heading" id="monitoring-signals-title">{{ monitoringCopy.signals.heading }}<span>{{ monitoringCopy.signals.accent }}</span></h2>
+    </div>
+    <div class="monitoring-intro__text">
+      <p>{{ monitoringCopy.signals.introOne }}</p>
+      <p>{{ monitoringCopy.signals.introTwo }}</p>
+    </div>
+  </header>
+  <ol class="monitoring-signal-list">
+    {% for category in monitoring.categories %}
+      <li class="monitoring-signal-row">
+        <span class="monitoring-index" aria-hidden="true">{{ category.number }}</span>
+        <div><p class="monitoring-code">{{ category.type }}</p><h3>{{ category.label }}</h3></div>
+        <p>{{ category.text }}</p>
+        <p class="monitoring-signal-row__example"><span>{{ monitoringCopy.signals.example }}</span>{{ category.example }}</p>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="monitoring-process" id="{{ monitoringAnchors.process }}" aria-labelledby="monitoring-process-title">
+  <div class="section-shell">
+    <p class="section-kicker">[ {{ monitoringCopy.process.kicker }} ]</p>
+    <h2 class="monitoring-heading" id="monitoring-process-title">{{ monitoringCopy.process.heading }}<span>{{ monitoringCopy.process.accent }}</span></h2>
+    <ol class="monitoring-pipeline" aria-label="{{ monitoringCopy.process.aria }}">
+      {% for step in monitoring.pipeline %}
+        <li>
+          <span class="monitoring-pipeline__node" aria-hidden="true">{{ step.number }}</span>
+          <h3>{{ step.label }}</h3>
+          <p class="monitoring-pipeline__question">{{ step.question }}</p>
+          <p>{{ step.text }}</p>
+        </li>
+      {% endfor %}
+    </ol>
+    <p class="monitoring-process__note">{{ monitoringCopy.process.note }}</p>
+  </div>
+</section>
+
+<section class="data-sources monitoring-sources" id="{{ monitoringAnchors.sources }}" aria-labelledby="monitoring-sources-title">
+  <div class="section-shell">
+    <header class="monitoring-intro">
+      <div><p class="section-kicker">[ {{ monitoringCopy.sources.kicker }} ]</p><h2 class="monitoring-heading" id="monitoring-sources-title">{{ monitoringCopy.sources.heading }}<span>{{ monitoringCopy.sources.accent }}</span></h2></div>
+      <p class="monitoring-intro__text">{{ monitoringCopy.sources.intro }}</p>
+    </header>
+    {% set sourceGroups = monitoring.sourceGroups %}
+    {% set sourceGroupsAria = monitoringCopy.sources.aria %}
+    {% include "components/source-landscape.njk" %}
+    <div class="monitoring-owned-data">
+      <h3>{{ monitoringCopy.sources.ownedHeading }}</h3>
+      <p>{{ monitoringCopy.sources.ownedExamples }}</p>
+      <p>{{ monitoringCopy.sources.ownedText }}</p>
+    </div>
+    <div class="data-sources__connection">
+      <h3>{{ monitoringCopy.sources.connectionHeading }}</h3>
+      <p>{{ monitoringCopy.sources.connectionText }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="monitoring-outputs section-shell" aria-labelledby="monitoring-outputs-title">
+  <header class="monitoring-intro">
+    <div><p class="section-kicker">[ {{ monitoringCopy.outputs.kicker }} ]</p><h2 class="monitoring-heading" id="monitoring-outputs-title">{{ monitoringCopy.outputs.heading }}<span>{{ monitoringCopy.outputs.accent }}</span></h2></div>
+    <p class="monitoring-intro__text">{{ monitoringCopy.outputs.intro }}</p>
+  </header>
+  <dl class="monitoring-output-list">
+    {% for output in monitoring.outputs %}
+      <div>
+        <dt><span class="monitoring-index" aria-hidden="true">{{ output.number }}</span>{{ output.label }}</dt>
+        <dd><p class="monitoring-code">{{ output.format }}</p><p>{{ output.text }}</p></dd>
+      </div>
+    {% endfor %}
+  </dl>
+</section>
+
+<section class="monitoring-context" aria-labelledby="monitoring-context-title">
+  <div class="section-shell">
+    <p class="section-kicker">[ {{ monitoringCopy.context.kicker }} ]</p>
+    <h2 class="monitoring-heading" id="monitoring-context-title">{{ monitoringCopy.context.heading }}<span>{{ monitoringCopy.context.accent }}</span></h2>
+    <div class="monitoring-context__layout">
+      <div class="monitoring-context__baseline">
+        <p>{{ monitoringCopy.context.baselinePrompt }}</p>
+        <blockquote>{{ monitoringCopy.context.baselineQuestion }}</blockquote>
+      </div>
+      <div class="monitoring-context__questions">
+        <p class="section-kicker">{{ monitoringCopy.context.questionsPrompt }}</p>
+        <ul>{% for question in monitoring.questions %}<li>{{ question }}</li>{% endfor %}</ul>
+      </div>
+    </div>
+    <p class="monitoring-context__result">{{ monitoringCopy.context.result }}<span>{{ monitoringCopy.context.resultAccent }}</span></p>
+  </div>
+</section>
+
+<section class="monitoring-teams section-shell" aria-labelledby="monitoring-teams-title">
+  <p class="section-kicker">[ {{ monitoringCopy.teams.kicker }} ]</p>
+  <h2 class="monitoring-heading" id="monitoring-teams-title">{{ monitoringCopy.teams.heading }}<span>{{ monitoringCopy.teams.accent }}</span></h2>
+  <ol class="monitoring-team-list">
+    {% for team in monitoring.teams %}
+      <li><span class="monitoring-index" aria-hidden="true">{{ team.number }}</span><h3>{{ team.label }}</h3><p>{{ team.text }}</p></li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="monitoring-custom" aria-labelledby="monitoring-custom-title">
+  <div class="monitoring-custom__inner section-shell">
+    <div>
+      <p class="section-kicker">[ Custom Monitoring ]</p>
+      <h2 class="monitoring-heading" id="monitoring-custom-title">{{ monitoringCopy.custom.heading }}<span>{{ monitoringCopy.custom.accent }}</span></h2>
+      <div class="monitoring-custom__text">
+        {% for paragraph in monitoringCopy.custom.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+      </div>
+      <p class="monitoring-custom__scope">{{ monitoringCopy.custom.scope }}<span>{{ monitoringCopy.custom.scopeAccent }}</span></p>
+    </div>
+    <figure class="monitoring-architecture">
+      <figcaption class="monitoring-code">{{ monitoringCopy.custom.architectureLabel }}</figcaption>
+      <ol>{% for layer in monitoring.architecture %}<li><span class="monitoring-index" aria-hidden="true">0{{ loop.index }}</span>{{ layer }}</li>{% endfor %}</ol>
+      <p>Alerts / Dashboard / API</p>
+    </figure>
+  </div>
+</section>
+
+<section class="contact monitoring-contact" id="{{ monitoringAnchors.contact }}" aria-labelledby="contact-title">
+  <div class="contact__inner section-shell">
+    <header class="contact-intro"><p class="section-kicker">[ {{ monitoringCopy.contact.label }} ]</p><h2 id="contact-title"><span>{{ monitoringCopy.contact.heading }}</span><span>{{ monitoringCopy.contact.accent }}</span></h2></header>
+    <div class="contact-body">
+      <div class="contact-summary">
+        <p>{{ monitoringCopy.contact.introOne }}</p>
+        <p>{{ monitoringCopy.contact.introTwo }}</p>
+        <ul class="monitoring-contact__examples" aria-label="{{ monitoringCopy.contact.examplesAria }}">{% for example in monitoring.contactExamples %}<li>{{ example }}</li>{% endfor %}</ul>
+        <div class="contact-meta"><p class="contact-direct"><span>{{ copy.directEmail }}</span><a href="mailto:{{ site.email }}?subject={{ monitoringCopy.contact.emailSubject | urlencode }}">{{ site.email }}</a></p></div>
+      </div>
+      {% include "components/contact-form.njk" %}
+    </div>
+  </div>
+</section>

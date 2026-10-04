@@ -1,0 +1,31 @@
+<form class="contact-form" name="projektanfrage" method="post" action="{{ copy.contactSuccessPath }}" data-netlify="true" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="projektanfrage">
+  <p class="form-honeypot" hidden><label>{{ copy.honeypot }} <input name="bot-field" type="text"></label></p>
+
+  <div class="form-grid">
+    <div class="field"><label for="name">{{ copy.name }} <span aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required></div>
+    <div class="field"><label for="email">{{ copy.email }} <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
+    <div class="field field-full"><label for="unternehmen">{{ copy.company }}</label><input id="unternehmen" name="unternehmen" type="text" autocomplete="organization"></div>
+    <div class="field">
+      <label for="leistung">{{ copy.serviceLabel }} <span aria-hidden="true">*</span></label>
+      <select id="leistung" name="leistung" required>
+        <option value="">{{ copy.selectPrompt }}</option>
+        {% for option in copy.serviceOptions %}<option value="{{ option.value }}"{% if contactService == option.value %} selected{% endif %}>{{ option.label }}</option>{% endfor %}
+      </select>
+    </div>
+    <div class="field">
+      <label for="budget">{{ copy.budgetLabel }}</label>
+      <select id="budget" name="budget">
+      <option value="">{{ copy.noAnswer }}</option>
+      {% for option in copy.budgetOptions %}<option>{{ option }}</option>{% endfor %}</select>
+    </div>
+    <div class="field field-full"><label for="projekt">{{ copy.projectLabel }} <span aria-hidden="true">*</span></label><textarea id="projekt" name="projekt" rows="6" required aria-describedby="projekt-hilfe"></textarea><span class="form-help" id="projekt-hilfe">{{ contactHelp or copy.projectHelp }}</span></div>
+  </div>
+
+  <div class="consent-field">
+    <input id="datenschutz-zustimmung" name="datenschutz-zustimmung" type="checkbox" value="zugestimmt" required>
+    <label for="datenschutz-zustimmung">{{ copy.contactConsentPrefix }} <a href="{{ ui.privacyPath }}">{{ copy.privacyLink }}</a>. <span aria-hidden="true">*</span></label>
+  </div>
+  <p class="required-note"><span aria-hidden="true">*</span> {{ copy.required }}</p>
+  <button class="button button-dark" type="submit">{{ contactLabel or copy.contactSubmit }}</button>
+</form>

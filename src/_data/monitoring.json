@@ -1,0 +1,337 @@
+{
+  "signals": [
+    {
+      "time": "14:02",
+      "source": "competitor.example/pricing",
+      "label": "Pricing changed",
+      "detail": "€49 → €59",
+      "type": "WEB"
+    },
+    {
+      "time": "14:07",
+      "source": "Reddit / Produktdiskussion",
+      "label": "Discussion velocity +184 %",
+      "detail": "Ungewöhnlicher Anstieg der Aktivität",
+      "type": "COMMUNITY"
+    },
+    {
+      "time": "14:13",
+      "source": "TikTok",
+      "label": "Recurring narrative detected",
+      "detail": "Ein Argument taucht in neuen Videos auf",
+      "type": "SOCIAL"
+    },
+    {
+      "time": "14:21",
+      "source": "competitor.example",
+      "label": "New product page detected",
+      "detail": "Neues Angebot auf der Website",
+      "type": "WEB"
+    }
+  ],
+  "categories": [
+    {
+      "number": "01",
+      "label": "Wettbewerber",
+      "type": "Competitive Monitoring",
+      "text": "Neue Produkte, Preisänderungen, Positionierungen, Kampagnen oder strategische Veränderungen erkennen.",
+      "example": "Ein Wettbewerber verändert sein Pricing."
+    },
+    {
+      "number": "02",
+      "label": "Marken & Kommunikation",
+      "type": "Brand Monitoring",
+      "text": "Verfolgen, wo und in welchem Kontext Marken, Produkte und Themen auftauchen.",
+      "example": "Eine Marke erscheint in einem neuen Kontext."
+    },
+    {
+      "number": "03",
+      "label": "Narrative & Themen",
+      "type": "Intelligence Monitoring",
+      "text": "Erkennen, welche Diskussionen entstehen, welche Argumente sich wiederholen und welche Akteure sie verbreiten.",
+      "example": "Ein Narrativ gewinnt über mehrere Quellen an Reichweite."
+    },
+    {
+      "number": "04",
+      "label": "Plattformen & Communities",
+      "type": "Social Media Monitoring",
+      "text": "Neue Accounts, Videos, Posts, Kommentare oder Communities identifizieren und Entwicklungen über Zeit beobachten.",
+      "example": "Ein neuer TikTok-Account wird für ein Thema relevant."
+    },
+    {
+      "number": "05",
+      "label": "Websites",
+      "type": "Web Monitoring",
+      "text": "Inhalte, Angebote, Dokumente oder definierte Bereiche von Websites auf Veränderungen prüfen.",
+      "example": "Eine Produktseite oder ein Dokument verändert sich."
+    },
+    {
+      "number": "06",
+      "label": "Markt & Trends",
+      "type": "Market Monitoring",
+      "text": "Beobachten, welche Produkte, Kategorien, Akteure oder Themen an Aufmerksamkeit gewinnen oder verlieren.",
+      "example": "Ein Produkt gewinnt in mehreren Communities an Aufmerksamkeit."
+    }
+  ],
+  "pipeline": [
+    {
+      "number": "01",
+      "label": "Define",
+      "question": "Was wollen wir erkennen?",
+      "text": "Fragestellung, relevante Quellen und konkrete Signale definieren."
+    },
+    {
+      "number": "02",
+      "label": "Collect",
+      "question": "Welche Daten brauchen wir dafür?",
+      "text": "Öffentlich zugängliche oder bereitgestellte Daten regelmäßig erfassen und strukturiert speichern."
+    },
+    {
+      "number": "03",
+      "label": "Analyze",
+      "question": "Was passiert in den Daten?",
+      "text": "Texte, Videos, Metadaten, Entitäten, Netzwerke und zeitliche Entwicklungen analysieren."
+    },
+    {
+      "number": "04",
+      "label": "Detect",
+      "question": "Was hat sich verändert?",
+      "text": "Neue Akteure, ungewöhnliche Entwicklungen, wiederkehrende Narrative oder andere definierte Ereignisse erkennen."
+    },
+    {
+      "number": "05",
+      "label": "Deliver",
+      "question": "Was muss das Team wissen?",
+      "text": "Ergebnisse als Alert, Dashboard, Report, Search-System, Datensatz oder API bereitstellen."
+    }
+  ],
+  "sourceGroups": [
+    {
+      "number": "01",
+      "title": "Social Media",
+      "featured": true,
+      "examples": [
+        "TikTok",
+        "Instagram",
+        "YouTube",
+        "Reddit",
+        "X",
+        "LinkedIn",
+        "Facebook",
+        "Threads"
+      ]
+    },
+    {
+      "number": "02",
+      "title": "Communities",
+      "examples": [
+        "Foren",
+        "öffentliche Telegram-Kanäle",
+        "öffentliche Discord-Communities",
+        "Imageboards",
+        "Nischenplattformen"
+      ]
+    },
+    {
+      "number": "03",
+      "title": "Web",
+      "examples": [
+        "Websites",
+        "Blogs",
+        "öffentliche Datenbanken",
+        "Web-Archive",
+        "öffentliche Dark-Web-Quellen"
+      ]
+    },
+    {
+      "number": "04",
+      "title": "Video, Audio & Dokumente",
+      "examples": [
+        "Videos",
+        "Livestreams",
+        "Podcasts",
+        "PDFs",
+        "Reports",
+        "Präsentationen",
+        "Tabellen"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "number": "01",
+      "label": "Alerts",
+      "format": "EVENT → NOTIFICATION",
+      "text": "Benachrichtigungen bei definierten Ereignissen oder Veränderungen. Genau dann, wenn ein Signal relevant wird."
+    },
+    {
+      "number": "02",
+      "label": "Dashboards",
+      "format": "SIGNALS → OVERVIEW",
+      "text": "Ein laufender Überblick über relevante Entwicklungen, mit Zeitverläufen und dem Kontext der zugrunde liegenden Quellen."
+    },
+    {
+      "number": "03",
+      "label": "Reports",
+      "format": "OBSERVATIONS → CONTEXT",
+      "text": "Regelmäßige Zusammenfassungen mit Einordnung: Was hat sich verändert und was bedeutet es für eure Fragestellung?"
+    },
+    {
+      "number": "04",
+      "label": "Search",
+      "format": "ARCHIVE → SEARCH",
+      "text": "Durchsuchbare Archive und Intelligence-Datenbanken, um Inhalte, Akteure und Entwicklungen nachvollziehbar zu recherchieren."
+    },
+    {
+      "number": "05",
+      "label": "API",
+      "format": "STRUCTURED DATA → SYSTEMS",
+      "text": "Strukturierte Daten und erkannte Ereignisse für bestehende Systeme, interne Tools und eigene Workflows."
+    },
+    {
+      "number": "06",
+      "label": "Raw Data",
+      "format": "CSV / JSON / DATABASE",
+      "text": "Datensätze als CSV, JSON, Datenbank oder in anderen maschinenlesbaren Formaten für eure eigene Analyse."
+    }
+  ],
+  "questions": [
+    "Wo taucht sie auf?",
+    "In welchem Kontext?",
+    "Welche Akteure treiben die Diskussion?",
+    "Welche Themen treten gemeinsam auf?",
+    "Was verändert sich über Zeit?",
+    "Ist die Entwicklung ungewöhnlich?"
+  ],
+  "teams": [
+    {
+      "number": "01",
+      "label": "Strategy & Competitive Intelligence",
+      "text": "Wettbewerber, Märkte, Produkte und Positionierungen beobachten. Veränderungen erkennen, die für strategische Entscheidungen relevant sind."
+    },
+    {
+      "number": "02",
+      "label": "Brand & Communications",
+      "text": "Markenwahrnehmung, Diskussionen, Narrative und relevante Akteure verfolgen. Sichtbarkeit im jeweiligen Kontext verstehen."
+    },
+    {
+      "number": "03",
+      "label": "Market & Consumer Intelligence",
+      "text": "Produkte, Trends, Bedürfnisse und Veränderungen erkennen. Entwicklungen über Plattformen und Zeiträume hinweg einordnen."
+    },
+    {
+      "number": "04",
+      "label": "Research & Investigations",
+      "text": "Akteure, Netzwerke, Inhalte und Quellen über längere Zeiträume dokumentieren und untersuchen. Beobachtungen nachvollziehbar zusammenführen."
+    }
+  ],
+  "architecture": [
+    "Sources",
+    "Collectors",
+    "Data Layer",
+    "Analysis",
+    "Detection"
+  ],
+  "contactExamples": [
+    "Wettbewerber",
+    "Marken",
+    "Plattformen",
+    "Narrative",
+    "Websites",
+    "Märkte"
+  ],
+  "meta": {
+    "title": "Monitoring für Web, Social Media & Daten | dynamiq.",
+    "description": "dynamiq. entwickelt Monitoring-Systeme für Web, Social Media, Communities und Daten. Veränderungen, Narrative und relevante Signale erkennen."
+  },
+  "copy": {
+    "hero": {
+      "heading": [
+        "Nicht alles",
+        "beobachten."
+      ],
+      "accent": [
+        "Das Richtige",
+        "erkennen."
+      ],
+      "lead": "Märkte verändern sich. Wettbewerber ändern ihre Positionierung. Diskussionen entstehen auf neuen Plattformen. Narrative gewinnen an Reichweite.",
+      "text": "dynamiq. beobachtet die Quellen, die für eure Fragestellung relevant sind, und macht Veränderungen systematisch messbar.",
+      "processLabel": "So funktioniert es"
+    },
+    "feed": {
+      "example": "Beispiel",
+      "aria": "Beispiele für erkannte Monitoring-Signale",
+      "footer": "Quelle erfasst. Veränderung erkannt. Signal geliefert."
+    },
+    "signals": {
+      "kicker": "Relevante Veränderungen",
+      "heading": "Nicht alles beobachten.",
+      "accent": "Das Richtige erkennen.",
+      "introOne": "Monitoring beginnt bei dynamiq. nicht mit einer Keyword-Liste.",
+      "introTwo": "Zuerst definieren wir, welche Veränderungen für eure Entscheidung relevant sind. Anschließend erfassen wir die passenden Quellen regelmäßig und prüfen sie auf genau diese Signale.",
+      "example": "Zum Beispiel"
+    },
+    "process": {
+      "kicker": "So funktioniert Monitoring",
+      "heading": "Von einer Frage",
+      "accent": "zu einem laufenden Monitoring.",
+      "aria": "Monitoring-Prozess in fünf Schritten",
+      "note": "Die Fragestellung bestimmt Quellen, Erfassungsrhythmus und Erkennung. Das Ergebnis passt sich eurem Arbeitsablauf an."
+    },
+    "sources": {
+      "kicker": "Quellen",
+      "heading": "Monitoring über",
+      "accent": "verschiedene Quellen hinweg.",
+      "intro": "Ein relevantes Signal entsteht selten nur an einem Ort.",
+      "aria": "Quellen für ein individuelles Monitoring",
+      "ownedHeading": "Eigene Daten",
+      "ownedExamples": "APIs · Datenbanken · bestehende Datensätze · interne Datenquellen",
+      "ownedText": "Data Monitoring kann auch auf Daten aufbauen, die ihr bereits erfasst oder für die Analyse bereitstellt.",
+      "connectionHeading": "Quellen lassen sich miteinander verbinden.",
+      "connectionText": "Ein Signal auf TikTok kann gemeinsam mit Veränderungen auf einer Website, Diskussionen auf Reddit oder vorhandenen Unternehmensdaten analysiert werden."
+    },
+    "outputs": {
+      "kicker": "Output",
+      "heading": "Monitoring muss kein",
+      "accent": "weiteres Dashboard sein.",
+      "intro": "Ein Signal ist dann nützlich, wenn es beim richtigen Team ankommt. Wir liefern die Ergebnisse in der Form, die ihr für eure Arbeit braucht."
+    },
+    "context": {
+      "kicker": "Kontext statt Zählwert",
+      "heading": "Nicht nur",
+      "accent": "Erwähnungen zählen.",
+      "baselinePrompt": "Klassisches Monitoring beantwortet oft Fragen wie:",
+      "baselineQuestion": "Wie oft wurde unsere Marke erwähnt?",
+      "questionsPrompt": "dynamiq. fragt zusätzlich:",
+      "result": "Aus einzelnen Beobachtungen",
+      "resultAccent": "wird ein belastbares Bild."
+    },
+    "teams": {
+      "kicker": "Teams & Fragestellungen",
+      "heading": "Monitoring für",
+      "accent": "unterschiedliche Fragestellungen."
+    },
+    "custom": {
+      "heading": "Wenn Standardsoftware",
+      "accent": "nicht ausreicht.",
+      "paragraphs": [
+        "Nicht jede Monitoring-Frage lässt sich mit einem bestehenden SaaS-Tool beantworten.",
+        "Manchmal müssen spezielle Quellen erfasst, ungewöhnliche Signale definiert oder verschiedene Datenquellen miteinander verbunden werden.",
+        "Dann entwickeln wir die passende Collection-, Analyse- und Monitoring-Pipeline selbst. Ein individuelles Monitoring-System, das an eurer Fragestellung ausgerichtet ist."
+      ],
+      "scope": "Von einem einzelnen automatisierten Watcher",
+      "scopeAccent": "bis zum internen Intelligence-System.",
+      "architectureLabel": "System Architecture / Beispiel"
+    },
+    "contact": {
+      "label": "Monitoring besprechen",
+      "heading": "Was möchtet ihr",
+      "accent": "beobachten?",
+      "introOne": "Beschreibt uns die Frage, die Quelle oder das Signal, das für euch relevant ist.",
+      "introTwo": "Wir klären gemeinsam, welche Daten dafür notwendig sind und wie ein sinnvolles Monitoring aussehen kann.",
+      "examplesAria": "Mögliche Themen eures Monitorings",
+      "emailSubject": "Monitoring-Anfrage",
+      "help": "Beschreibt die Frage, die Quelle oder das Signal, das ihr beobachten möchtet. Vorhandene Daten und gewünschte Ergebnisse helfen uns bei der Einordnung."
+    }
+  }
+}

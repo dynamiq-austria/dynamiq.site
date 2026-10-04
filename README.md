@@ -24,6 +24,10 @@ Der Build leert zuerst `_site/` und erzeugt anschließend eine vollständige, de
 ## Struktur
 
 - `src/index.njk` – Aufbau der Startseite
+- `src/monitoring.njk` – Monitoring-Landingpage mit Signal-Feed und Pipeline
+- `src/_data/monitoring.json` – Signale, Prozess, Quellen und Outputs der Monitoring-Seite
+- `src/_data/monitoring_en.json` – englische Inhalte der Monitoring-Seite
+- `src/_data/monitoringPages.js` – gemeinsame Seitenvorlage für `/monitoring/` und `/en/monitoring/`
 - `src/_data/site.json` – globale Navigation, Kontaktdaten und Markenangaben
 - `src/_data/home.json` – Leistungen, Prozess, Referenzen und Team der Startseite
 - `src/_includes/layouts/base.njk` – gemeinsames HTML-Grundlayout und Metadaten
@@ -40,6 +44,8 @@ Der Build leert zuerst `_site/` und erzeugt anschließend eine vollständige, de
 ## URLs
 
 - `/` – Startseite
+- `/monitoring/` – Monitoring für Web, Social Media, Communities und Daten
+- `/en/monitoring/` – englische Monitoring-Landingpage
 - `/danke/` – Bestätigung nach Formularversand
 - `/impressum/` – Impressum
 - `/datenschutz/` – Datenschutz

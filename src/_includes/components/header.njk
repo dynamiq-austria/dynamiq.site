@@ -26,6 +26,6 @@
       </div>
     </nav>
 
-    <a class="header-cta" href="{% if isHome %}#kontakt{% else %}{{ ui.homePath }}#kontakt{% endif %}">{{ ui.primaryCta }}</a>
+    <a class="header-cta" href="{% if contactPath %}{{ contactPath }}{% elif isHome %}#kontakt{% else %}{{ ui.homePath }}#kontakt{% endif %}">{{ contactLabel or ui.primaryCta }}</a>
   {% endif %}
 </header>

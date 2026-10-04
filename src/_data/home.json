@@ -40,6 +40,8 @@
         {
             "number": "03",
             "label": "Monitoring",
+            "href": "/monitoring/",
+            "linkLabel": "Monitoring im Detail",
             "text": "Aus einer einmaligen Untersuchung wird ein laufender Prozess. Relevante Quellen werden regelmäßig erfasst, verarbeitet und auf Veränderungen, neue Akteure, Narrative oder andere definierte Signale geprüft.",
             "outputs": ["Dashboards", "SaaS", "Interaktive Suchen", "APIs"]
         },

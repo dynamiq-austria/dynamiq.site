@@ -3,7 +3,7 @@
     <img src="/assets/logo-mark.png" alt="" width="512" height="512">
   </a>
   <p>{{ ui.footerDescription }}</p>
-  <a class="button button-light footer-cta" href="{% if isHome %}#kontakt{% else %}{{ ui.homePath }}#kontakt{% endif %}">{{ ui.primaryCta }}</a>
+  <a class="button button-light footer-cta" href="{% if contactPath %}{{ contactPath }}{% elif isHome %}#kontakt{% else %}{{ ui.homePath }}#kontakt{% endif %}">{{ contactLabel or ui.primaryCta }}</a>
   <nav aria-label="{{ ui.legalNavLabel }}">
     <a href="{{ ui.legalNoticePath }}">{{ ui.legalNotice }}</a>
     <a href="{{ ui.privacyPath }}">{{ ui.privacy }}</a>
