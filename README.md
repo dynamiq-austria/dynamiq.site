@@ -28,6 +28,10 @@ Der Build leert zuerst `_site/` und erzeugt anschließend eine vollständige, de
 - `src/_data/monitoring.json` – Signale, Prozess, Quellen und Outputs der Monitoring-Seite
 - `src/_data/monitoring_en.json` – englische Inhalte der Monitoring-Seite
 - `src/_data/monitoringPages.js` – gemeinsame Seitenvorlage für `/monitoring/` und `/en/monitoring/`
+- `src/agencies.njk` – Agentur-Landingpage mit Research-Leistungen, Zusammenarbeit, Prozess, Einsatzfeldern und Kontakt
+- `src/_data/agencies.json` und `src/_data/agencies_en.json` – deutsche und englische Agenturinhalte
+- `src/_data/agencyPages.js` – Sprachversionen und Sprungziele der Agentur-Landingpage
+- `assets/css/agencies.css` – seitenspezifische Gestaltung auf Basis der gemeinsamen Designvariablen
 - `src/_data/site.json` – globale Navigation, Kontaktdaten und Markenangaben
 - `src/_data/home.json` – Leistungen, Prozess, Referenzen und Team der Startseite
 - `src/_includes/layouts/base.njk` – gemeinsames HTML-Grundlayout und Metadaten
@@ -46,6 +50,8 @@ Der Build leert zuerst `_site/` und erzeugt anschließend eine vollständige, de
 - `/` – Startseite
 - `/monitoring/` – Monitoring für Web, Social Media, Communities und Daten
 - `/en/monitoring/` – englische Monitoring-Landingpage
+- `/agenturen/` – Data Intelligence für Agenturen
+- `/en/agencies/` – englische Agentur-Landingpage
 - `/danke/` – Bestätigung nach Formularversand
 - `/impressum/` – Impressum
 - `/datenschutz/` – Datenschutz

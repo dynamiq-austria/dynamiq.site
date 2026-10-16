@@ -10,8 +10,8 @@
     </button>
 
     <nav class="main-nav" id="main-nav" aria-label="{{ ui.navLabel }}" data-nav>
-      {% for item in ui.navigation %}
-        <a href="{% if isHome %}{{ item.href }}{% else %}{{ ui.homePath }}{{ item.href }}{% endif %}">{{ item.label }}</a>
+      {% for item in pageNavigation or ui.navigation %}
+        <a href="{% if pageNavigation or isHome %}{{ item.href }}{% else %}{{ ui.homePath }}{{ item.href }}{% endif %}">{{ item.label }}</a>
       {% endfor %}
       <div class="language-switcher" role="group" aria-label="{{ ui.languageLabel }}">
         {% if ui.lang == "en" %}

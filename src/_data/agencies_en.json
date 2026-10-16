@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "title": "Data Intelligence for Agencies – dynamiq.",
+    "description": "Custom data collection, research and analysis for agencies. Project-based or continuous, behind the scenes or completely white label."
+  },
+  "nav": { "research": "Research", "partnership": "Partnership", "process": "How it works", "contact": "Contact" },
+  "hero": {
+    "kicker": "Data Intelligence for Agencies",
+    "heading": "You have the client question.",
+    "accent": "We deliver the data.",
+    "lead": "Your clients want to understand what is happening across platforms, communities and the open web.",
+    "text": "dynamiq. helps agencies answer those questions with structured data collection, analysis and actionable intelligence.",
+    "note": "An extension of your team. Project-based, behind the scenes or completely white label.",
+    "cta": "Talk to us",
+    "secondary": "See what we can analyse"
+  },
+  "brief": {
+    "label": "From question to intelligence",
+    "questionLabel": "Your client question",
+    "question": "What are customers complaining about that our surveys are missing?",
+    "sourcesLabel": "Public sources",
+    "sources": ["Posts", "Comments", "Communities", "Reviews"],
+    "analysisLabel": "Our research & analysis",
+    "analysis": "Collect. Structure. Find patterns.",
+    "outputLabel": "Your client deliverable",
+    "output": "Findings. Evidence. Strategic implications.",
+    "footer": "Your client. Your brand. Our research."
+  },
+  "questions": {
+    "kicker": "Beyond social listening",
+    "heading": "Go beyond",
+    "accent": "counting mentions.",
+    "intro": "Most monitoring tools are good at counting mentions. They are less useful when the real question is:",
+    "items": [
+      "Why is the conversation changing?",
+      "What do customers actually complain about?",
+      "Which narratives are gaining traction?",
+      "What are competitors’ customers saying?",
+      "Which communities, accounts or platforms are driving a topic?",
+      "What signals are traditional monitoring tools missing?"
+    ],
+    "outro": "dynamiq. investigates the data behind those questions."
+  },
+  "research": {
+    "kicker": "What we can analyse",
+    "heading": "Research infrastructure.",
+    "accent": "Without building it yourself.",
+    "intro": "We combine custom data collection, platform research and quantitative analysis to turn fragmented public information into usable intelligence.",
+    "items": [
+      { "title": "Social & Community Research", "text": "Analyse posts, comments and discussions across relevant platforms and communities. Understand what people are talking about — and why." },
+      { "title": "Narrative Analysis", "text": "Identify recurring narratives, themes, claims and emerging discussion patterns. Track how they develop across platforms and over time." },
+      { "title": "Consumer Insights", "text": "Find pain points, unmet needs, questions, product feedback and purchasing signals directly in public conversations." },
+      { "title": "Competitive Intelligence", "text": "Analyse competitors, products, positioning and customer reactions using public data." },
+      { "title": "Issue & Reputation Intelligence", "text": "Understand which topics are emerging around a company, brand or industry before they become obvious in aggregate dashboards." },
+      { "title": "Custom Data Research", "text": "Have a question that does not fit into an existing dashboard? We can build the dataset around the question." }
+    ]
+  },
+  "partnership": {
+    "kicker": "Built for agencies",
+    "heading": "Your external data",
+    "accent": "and research unit.",
+    "intro": "You do not need another dashboard. You need answers you can use in strategy decks, client meetings and recommendations.",
+    "items": [
+      { "title": "White label", "text": "We can deliver analyses without dynamiq. branding so you can integrate the work directly into your own client deliverables." },
+      { "title": "Project-based", "text": "No long procurement process or permanent tool subscription required. Bring us a research question and we build the analysis around it." },
+      { "title": "Methodologically transparent", "text": "We document sources, collection methods, assumptions and limitations so your team can understand and defend the findings." },
+      { "title": "Custom instead of one-size-fits-all", "text": "We are not limited to the metrics available in a standard SaaS dashboard. If the data can be collected responsibly from public sources, we can investigate it." }
+    ]
+  },
+  "process": {
+    "kicker": "How it works",
+    "heading": "Your question in.",
+    "accent": "Actionable intelligence out.",
+    "items": [
+      {
+        "title": "You bring the question",
+        "intro": "For example:",
+        "questions": [
+          "Why is sentiment around our client’s product changing?",
+          "Which topics dominate discussions around our competitors?",
+          "What are customers complaining about that our surveys are missing?",
+          "Which narratives are emerging around this industry?"
+        ]
+      },
+      {
+        "title": "We design the research",
+        "intro": "We define the scope and methodology together:",
+        "items": ["Relevant platforms and sources", "Collection methodology", "Analysis framework", "Time period", "Sample size", "Limitations"]
+      },
+      {
+        "title": "We collect and analyse the data",
+        "intro": "Depending on the project, this can include:",
+        "items": ["Posts", "Comments", "Videos", "Articles", "Public communities", "Search results", "Websites", "Platform metadata"]
+      },
+      {
+        "title": "You receive actionable intelligence",
+        "intro": "Depending on your workflow, we deliver:",
+        "items": ["Executive summaries", "Datasets", "Charts", "Findings", "Strategic implications", "Client-ready reports", "White-label deliverables"]
+      }
+    ]
+  },
+  "cases": {
+    "kicker": "Typical agency use cases",
+    "heading": "Questions from",
+    "accent": "your everyday work.",
+    "intro": "From a focused pitch question to a complex communications challenge.",
+    "items": [
+      { "title": "PR & Communications", "question": "A client is suddenly facing criticism on TikTok, Reddit or YouTube.", "text": "We analyse where it started, which themes are spreading and what is driving the discussion." },
+      { "title": "Brand Strategy", "question": "Your team wants to understand how consumers actually describe a category, product or competitor.", "text": "We identify recurring language, needs, frustrations and associations." },
+      { "title": "Corporate Communications", "question": "A topic is developing across platforms but traditional monitoring provides little context.", "text": "We reconstruct the underlying conversation and its dynamics." },
+      { "title": "Consumer Insights", "question": "Surveys tell you what customers say when asked. Public conversations show what they talk about without being asked.", "text": "We help analyse both sides of that picture." },
+      { "title": "Competitive Intelligence", "question": "You want to understand how customers compare several competitors.", "text": "We analyse public discussions, reviews, comments and platform activity around them." },
+      { "title": "Pitch & New Business", "question": "Need a strong data point for a pitch?", "text": "We can run focused research around a market, audience or topic and provide original findings your competitors are unlikely to have." }
+    ]
+  },
+  "engagements": {
+    "kicker": "Ways to work together",
+    "heading": "One research question.",
+    "accent": "Or continuous intelligence.",
+    "intro": "You do not need to start with a large engagement.",
+    "fitLabel": "Ideal for",
+    "cta": "Discuss this format",
+    "items": [
+      { "title": "Signal Scan", "scope": "Focused research", "text": "A focused analysis of one question, market or topic.", "fit": "Pitches, client workshops and initial investigations." },
+      { "title": "Deep Dive", "scope": "Custom research project", "text": "A larger research project combining custom data collection and analysis.", "fit": "Strategic projects, market research and complex communications questions." },
+      { "title": "Continuous Intelligence", "scope": "Ongoing research", "text": "Ongoing monitoring and analysis of selected signals, platforms, competitors or topics.", "fit": "Continuous visibility rather than a one-off snapshot." }
+    ]
+  },
+  "relationship": {
+    "kicker": "Behind the scenes",
+    "heading": "Your client relationship",
+    "accent": "stays yours.",
+    "paragraphs": ["We can work visibly alongside your team or completely in the background. You remain the strategic partner.", "dynamiq. provides the data infrastructure, research and analysis behind the scenes."],
+    "points": ["No platform lock-in.", "No generic dashboard.", "No unnecessary layer between you and your client."],
+    "signature": "The source changes. The pipeline stays."
+  },
+  "contact": {
+    "label": "Discuss a research question",
+    "heading": "Have a client question",
+    "accent": "that needs data?",
+    "intro": "Send us the question.",
+    "text": "We will tell you what can realistically be collected, how we would analyse it and what the resulting project could look like.",
+    "help": "Tell us your research question, relevant markets or sources, your timeline and the deliverable you need. Let us know if you prefer white-label delivery.",
+    "emailSubject": "Research question for an agency project"
+  }
+}

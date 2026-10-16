@@ -1,0 +1,179 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: agencyPages
+  size: 1
+  alias: localizedAgency
+  addAllPagesToCollections: true
+permalink: "{{ localizedAgency.permalink }}"
+eleventyComputed:
+  title: "{{ localizedAgency.content.meta.title | safe }}"
+  description: "{{ localizedAgency.content.meta.description | safe }}"
+  pageLang: "{{ localizedAgency.lang }}"
+  alternatePage: "{{ localizedAgency.alternatePage }}"
+  contactPath: "#{{ localizedAgency.anchors.contact }}"
+  contactLabel: "{{ localizedAgency.content.contact.label | safe }}"
+  contactHelp: "{{ localizedAgency.content.contact.help | safe }}"
+  contactService: "{{ 'Analysis' if localizedAgency.lang == 'en' else 'Analyse' }}"
+xDefaultPage: /agenturen/
+ogImage: /assets/og/og-image-data-intelligence.png
+showNavigation: true
+mainClass: agencies-page
+pageStylesheet: /assets/css/agencies.css?v=1
+---
+{% set ui = i18n[localizedAgency.lang] %}
+{% set agency = localizedAgency.content %}
+{% set anchors = localizedAgency.anchors %}
+{% set copy = ui.home %}
+
+<section class="agency-hero" aria-labelledby="agency-title">
+  <div class="agency-hero__inner section-shell">
+    <div class="agency-hero__copy">
+      <p class="section-kicker">[ {{ agency.hero.kicker }} ]</p>
+      <h1 id="agency-title">{{ agency.hero.heading }}<span>{{ agency.hero.accent }}</span></h1>
+      <p class="agency-hero__lead">{{ agency.hero.lead }}</p>
+      <p>{{ agency.hero.text }}</p>
+      <div class="agency-actions">
+        <a class="button button-dark" href="#{{ anchors.contact }}">{{ agency.hero.cta }} <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="#{{ anchors.research }}">{{ agency.hero.secondary }} <span aria-hidden="true">↓</span></a>
+      </div>
+      <p class="agency-hero__note">{{ agency.hero.note }}</p>
+    </div>
+
+    <figure class="agency-brief">
+      <figcaption class="agency-mono">{{ agency.brief.label }}</figcaption>
+      <div class="agency-brief__question">
+        <p class="agency-mono">01 / {{ agency.brief.questionLabel }}</p>
+        <blockquote>{{ agency.brief.question }}</blockquote>
+      </div>
+      <div class="agency-brief__sources">
+        <p class="agency-mono">02 / {{ agency.brief.sourcesLabel }}</p>
+        <ul class="agency-tags">{% for source in agency.brief.sources %}<li>{{ source }}</li>{% endfor %}</ul>
+      </div>
+      <div class="agency-brief__analysis">
+        <p class="agency-mono">03 / {{ agency.brief.analysisLabel }}</p>
+        <p>{{ agency.brief.analysis }}</p>
+      </div>
+      <div class="agency-brief__output">
+        <p class="agency-mono">04 / {{ agency.brief.outputLabel }}</p>
+        <p>{{ agency.brief.output }}</p>
+      </div>
+      <p class="agency-brief__footer">{{ agency.brief.footer }}</p>
+    </figure>
+  </div>
+</section>
+
+<section class="agency-questions section-shell" aria-labelledby="questions-title">
+  <header>
+    <p class="section-kicker">[ {{ agency.questions.kicker }} ]</p>
+    <h2 class="agency-heading" id="questions-title">{{ agency.questions.heading }}<span>{{ agency.questions.accent }}</span></h2>
+    <p class="agency-lead">{{ agency.questions.intro }}</p>
+  </header>
+  <div>
+    <ul class="agency-question-list">{% for question in agency.questions.items %}<li>{{ question }}</li>{% endfor %}</ul>
+    <p class="agency-questions__outro">{{ agency.questions.outro }}</p>
+  </div>
+</section>
+
+<section class="agency-research" id="{{ anchors.research }}" aria-labelledby="research-title">
+  <div class="section-shell">
+    <header class="agency-intro">
+      <div><p class="section-kicker">[ {{ agency.research.kicker }} ]</p><h2 class="agency-heading" id="research-title">{{ agency.research.heading }}<span>{{ agency.research.accent }}</span></h2></div>
+      <p class="agency-lead">{{ agency.research.intro }}</p>
+    </header>
+    <ol class="agency-research__grid">
+      {% for item in agency.research.items %}
+        <li><span class="agency-index" aria-hidden="true">0{{ loop.index }}</span><h3>{{ item.title }}</h3><p>{{ item.text }}</p></li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="agency-partnership section-shell" id="{{ anchors.partnership }}" aria-labelledby="partnership-title">
+  <header class="agency-intro">
+    <div><p class="section-kicker">[ {{ agency.partnership.kicker }} ]</p><h2 class="agency-heading" id="partnership-title">{{ agency.partnership.heading }}<span>{{ agency.partnership.accent }}</span></h2></div>
+    <p class="agency-lead">{{ agency.partnership.intro }}</p>
+  </header>
+  <dl class="agency-principles">
+    {% for item in agency.partnership.items %}
+      <div><dt><span class="agency-index" aria-hidden="true">0{{ loop.index }}</span>{{ item.title }}</dt><dd>{{ item.text }}</dd></div>
+    {% endfor %}
+  </dl>
+</section>
+
+<section class="agency-process" id="{{ anchors.process }}" aria-labelledby="process-title">
+  <div class="section-shell">
+    <p class="section-kicker">[ {{ agency.process.kicker }} ]</p>
+    <h2 class="agency-heading" id="process-title">{{ agency.process.heading }}<span>{{ agency.process.accent }}</span></h2>
+    <ol class="agency-steps">
+      {% for step in agency.process.items %}
+        <li>
+          <div class="agency-steps__title"><span class="agency-index" aria-hidden="true">0{{ loop.index }}</span><h3>{{ step.title }}</h3></div>
+          <div class="agency-steps__body">
+            <p>{{ step.intro }}</p>
+            {% if step.questions %}<ul class="agency-step-questions">{% for question in step.questions %}<li>“{{ question }}”</li>{% endfor %}</ul>{% endif %}
+            {% if step.items %}<ul class="agency-tags">{% for item in step.items %}<li>{{ item }}</li>{% endfor %}</ul>{% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="agency-cases section-shell" id="{{ anchors.cases }}" aria-labelledby="cases-title">
+  <header class="agency-intro">
+    <div><p class="section-kicker">[ {{ agency.cases.kicker }} ]</p><h2 class="agency-heading" id="cases-title">{{ agency.cases.heading }}<span>{{ agency.cases.accent }}</span></h2></div>
+    <p class="agency-lead">{{ agency.cases.intro }}</p>
+  </header>
+  <div class="agency-case-list">
+    {% for item in agency.cases.items %}
+      <details{% if loop.first %} open{% endif %}>
+        <summary><span class="agency-index" aria-hidden="true">0{{ loop.index }}</span><h3>{{ item.title }}</h3><span class="agency-case-list__toggle" aria-hidden="true"></span></summary>
+        <div class="agency-case-list__body"><p>{{ item.question }}</p><p>{{ item.text }}</p></div>
+      </details>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="agency-engagements" aria-labelledby="engagements-title">
+  <div class="section-shell">
+    <header class="agency-intro">
+      <div><p class="section-kicker">[ {{ agency.engagements.kicker }} ]</p><h2 class="agency-heading" id="engagements-title">{{ agency.engagements.heading }}<span>{{ agency.engagements.accent }}</span></h2></div>
+      <p class="agency-lead">{{ agency.engagements.intro }}</p>
+    </header>
+    <div class="agency-formats">
+      {% for item in agency.engagements.items %}
+        <article aria-labelledby="format-{{ loop.index }}">
+          <p class="agency-mono">0{{ loop.index }} / {{ item.scope }}</p>
+          <h3 id="format-{{ loop.index }}">{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+          <p class="agency-formats__fit"><span class="agency-mono">{{ agency.engagements.fitLabel }}</span>{{ item.fit }}</p>
+          <a class="text-link" href="#{{ anchors.contact }}">{{ agency.engagements.cta }}<span class="sr-only">: {{ item.title }}</span> <span aria-hidden="true">↗</span></a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="agency-relationship section-shell" aria-labelledby="relationship-title">
+  <p class="section-kicker">[ {{ agency.relationship.kicker }} ]</p>
+  <h2 class="agency-heading" id="relationship-title">{{ agency.relationship.heading }}<span>{{ agency.relationship.accent }}</span></h2>
+  <div class="agency-relationship__body">
+    <div>{% for paragraph in agency.relationship.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}</div>
+    <ul>{% for point in agency.relationship.points %}<li>{{ point }}</li>{% endfor %}</ul>
+  </div>
+  <p class="agency-signature"><strong>dynamiq.</strong><span>{{ agency.relationship.signature }}</span></p>
+</section>
+
+<section class="contact agency-contact" id="{{ anchors.contact }}" aria-labelledby="contact-title">
+  <div class="contact__inner section-shell">
+    <header class="contact-intro"><p class="section-kicker">[ {{ agency.contact.label }} ]</p><h2 id="contact-title"><span>{{ agency.contact.heading }}</span><span>{{ agency.contact.accent }}</span></h2></header>
+    <div class="contact-body">
+      <div class="contact-summary">
+        <p>{{ agency.contact.intro }}</p><p>{{ agency.contact.text }}</p>
+        <div class="contact-meta"><p class="contact-direct"><span>{{ copy.directEmail }}</span><a href="mailto:{{ site.email }}?subject={{ agency.contact.emailSubject | urlencode }}">{{ site.email }}</a></p></div>
+      </div>
+      {% include "components/contact-form.njk" %}
+    </div>
+  </div>
+</section>

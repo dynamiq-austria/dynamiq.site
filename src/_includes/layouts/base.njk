@@ -35,6 +35,7 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="/styles.css?v=monitoring-v1">
+  {% if pageStylesheet %}<link rel="stylesheet" href="{{ pageStylesheet }}">{% endif %}
 
   {% if isHome %}
   <script type="application/ld+json">

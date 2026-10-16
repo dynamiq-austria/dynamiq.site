@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "title": "Data Intelligence für Agenturen – dynamiq.",
+    "description": "Individuelle Datenerhebung, Research und Analyse für Agenturen. Projektbasiert oder laufend, im Hintergrund oder vollständig als White Label."
+  },
+  "nav": { "research": "Research", "partnership": "Zusammenarbeit", "process": "Ablauf", "contact": "Kontakt" },
+  "hero": {
+    "kicker": "Data Intelligence für Agenturen",
+    "heading": "Ihr habt die Kundenfrage.",
+    "accent": "Wir liefern die Daten.",
+    "lead": "Eure Kunden wollen verstehen, was auf Plattformen, in Communities und im offenen Web passiert.",
+    "text": "dynamiq. hilft Agenturen, diese Fragen mit strukturierter Datenerhebung, Analyse und verwertbarer Intelligence zu beantworten.",
+    "note": "Als Erweiterung eures Teams. Projektbasiert, im Hintergrund oder vollständig als White Label.",
+    "cta": "Sprecht mit uns",
+    "secondary": "Was wir analysieren können"
+  },
+  "brief": {
+    "label": "Von der Frage zur Intelligence",
+    "questionLabel": "Eure Kundenfrage",
+    "question": "Worüber beschweren sich Kunden, das unsere Umfragen nicht erfassen?",
+    "sourcesLabel": "Öffentliche Quellen",
+    "sources": ["Posts", "Kommentare", "Communities", "Bewertungen"],
+    "analysisLabel": "Unser Research & unsere Analyse",
+    "analysis": "Erheben. Strukturieren. Muster erkennen.",
+    "outputLabel": "Euer Ergebnis für den Kunden",
+    "output": "Erkenntnisse. Belege. Strategische Konsequenzen.",
+    "footer": "Euer Kunde. Eure Marke. Unser Research."
+  },
+  "questions": {
+    "kicker": "Mehr als Social Listening",
+    "heading": "Mehr verstehen.",
+    "accent": "Nicht nur Erwähnungen zählen.",
+    "intro": "Die meisten Monitoring-Tools können Erwähnungen gut zählen. Weniger hilfreich sind sie, wenn die eigentliche Frage lautet:",
+    "items": [
+      "Warum verändert sich die Diskussion?",
+      "Worüber beschweren sich Kunden tatsächlich?",
+      "Welche Narrative gewinnen an Bedeutung?",
+      "Was sagen die Kunden der Wettbewerber?",
+      "Welche Communities, Accounts oder Plattformen treiben ein Thema?",
+      "Welche Signale übersehen klassische Monitoring-Tools?"
+    ],
+    "outro": "dynamiq. untersucht die Daten hinter diesen Fragen."
+  },
+  "research": {
+    "kicker": "Was wir analysieren können",
+    "heading": "Research-Infrastruktur.",
+    "accent": "Ohne sie selbst aufzubauen.",
+    "intro": "Wir verbinden individuelle Datenerhebung, Plattform-Recherche und quantitative Analyse. So wird aus fragmentierten öffentlichen Informationen nutzbare Intelligence.",
+    "items": [
+      { "title": "Social & Community Research", "text": "Posts, Kommentare und Diskussionen auf relevanten Plattformen und in Communities analysieren. Verstehen, worüber Menschen sprechen — und warum." },
+      { "title": "Narrative Analysis", "text": "Wiederkehrende Narrative, Themen, Behauptungen und neue Diskussionsmuster erkennen. Ihre Entwicklung über Plattformen und Zeiträume hinweg verfolgen." },
+      { "title": "Consumer Insights", "text": "Probleme, unerfüllte Bedürfnisse, Fragen, Produktfeedback und Kaufsignale direkt in öffentlichen Gesprächen finden." },
+      { "title": "Competitive Intelligence", "text": "Wettbewerber, Produkte, Positionierung und Kundenreaktionen anhand öffentlicher Daten analysieren." },
+      { "title": "Issue & Reputation Intelligence", "text": "Verstehen, welche Themen rund um ein Unternehmen, eine Marke oder eine Branche entstehen, bevor sie in aggregierten Dashboards deutlich werden." },
+      { "title": "Custom Data Research", "text": "Eine Frage, die in kein bestehendes Dashboard passt? Wir können den Datensatz rund um die Frage aufbauen." }
+    ]
+  },
+  "partnership": {
+    "kicker": "Für Agenturen gemacht",
+    "heading": "Eure externe Daten-",
+    "accent": "und Research-Unit.",
+    "intro": "Ihr braucht kein weiteres Dashboard. Ihr braucht Antworten für Strategiedecks, Kundengespräche und Empfehlungen.",
+    "items": [
+      { "title": "White Label", "text": "Wir können Analysen ohne dynamiq. Branding liefern, damit ihr die Ergebnisse direkt in eure eigenen Kundenunterlagen integrieren könnt." },
+      { "title": "Projektbasiert", "text": "Kein langer Beschaffungsprozess und kein dauerhaftes Tool-Abonnement nötig. Bringt uns eine Research-Frage und wir bauen die Analyse darum auf." },
+      { "title": "Methodisch transparent", "text": "Wir dokumentieren Quellen, Erhebungsmethoden, Annahmen und Grenzen, damit euer Team die Ergebnisse nachvollziehen und vertreten kann." },
+      { "title": "Individuell statt von der Stange", "text": "Wir sind nicht auf die Kennzahlen eines Standard-SaaS-Dashboards beschränkt. Wenn sich Daten aus öffentlichen Quellen verantwortungsvoll erheben lassen, können wir sie untersuchen." }
+    ]
+  },
+  "process": {
+    "kicker": "So funktioniert’s",
+    "heading": "Eure Frage als Ausgangspunkt.",
+    "accent": "Verwertbare Intelligence als Ergebnis.",
+    "items": [
+      {
+        "title": "Ihr bringt die Frage",
+        "intro": "Zum Beispiel:",
+        "questions": [
+          "Warum verändert sich die Stimmung rund um das Produkt unseres Kunden?",
+          "Welche Themen dominieren die Diskussionen über unsere Wettbewerber?",
+          "Worüber beschweren sich Kunden, das unsere Umfragen nicht erfassen?",
+          "Welche Narrative entstehen rund um diese Branche?"
+        ]
+      },
+      {
+        "title": "Wir konzipieren die Untersuchung",
+        "intro": "Gemeinsam legen wir Umfang und Methodik fest:",
+        "items": ["Relevante Plattformen und Quellen", "Erhebungsmethodik", "Analyserahmen", "Zeitraum", "Stichprobengröße", "Grenzen der Untersuchung"]
+      },
+      {
+        "title": "Wir erheben und analysieren die Daten",
+        "intro": "Je nach Projekt können dazu gehören:",
+        "items": ["Posts", "Kommentare", "Videos", "Artikel", "Öffentliche Communities", "Suchergebnisse", "Websites", "Plattform-Metadaten"]
+      },
+      {
+        "title": "Ihr erhaltet verwertbare Intelligence",
+        "intro": "Passend zu eurem Workflow liefern wir:",
+        "items": ["Executive Summaries", "Datensätze", "Charts", "Erkenntnisse", "Strategische Konsequenzen", "Kundenfertige Reports", "White-Label-Unterlagen"]
+      }
+    ]
+  },
+  "cases": {
+    "kicker": "Typische Einsatzfelder",
+    "heading": "Fragen aus",
+    "accent": "eurem Agenturalltag.",
+    "intro": "Von einer gezielten Pitch-Frage bis zur komplexen Kommunikationsaufgabe.",
+    "items": [
+      { "title": "PR & Kommunikation", "question": "Ein Kunde steht plötzlich auf TikTok, Reddit oder YouTube in der Kritik.", "text": "Wir analysieren, wo es angefangen hat, welche Themen sich verbreiten und was die Diskussion antreibt." },
+      { "title": "Markenstrategie", "question": "Euer Team will verstehen, wie Menschen eine Kategorie, ein Produkt oder einen Wettbewerber tatsächlich beschreiben.", "text": "Wir identifizieren wiederkehrende Sprache, Bedürfnisse, Frustrationen und Assoziationen." },
+      { "title": "Unternehmenskommunikation", "question": "Ein Thema entwickelt sich über mehrere Plattformen, aber klassisches Monitoring liefert wenig Kontext.", "text": "Wir rekonstruieren die zugrunde liegende Diskussion und ihre Dynamik." },
+      { "title": "Consumer Insights", "question": "Umfragen zeigen, was Kunden auf Nachfrage sagen. Öffentliche Gespräche zeigen, worüber sie von sich aus sprechen.", "text": "Wir helfen, beide Seiten dieses Bildes zu analysieren." },
+      { "title": "Competitive Intelligence", "question": "Ihr wollt verstehen, wie Kunden mehrere Wettbewerber vergleichen.", "text": "Wir analysieren öffentliche Diskussionen, Bewertungen, Kommentare und Plattformaktivitäten rund um diese Anbieter." },
+      { "title": "Pitch & New Business", "question": "Ihr braucht einen starken Datenpunkt für einen Pitch?", "text": "Wir recherchieren gezielt zu einem Markt, einer Zielgruppe oder einem Thema und liefern eigene Erkenntnisse, die eure Wettbewerber voraussichtlich nicht haben." }
+    ]
+  },
+  "engagements": {
+    "kicker": "Formen der Zusammenarbeit",
+    "heading": "Eine Research-Frage.",
+    "accent": "Oder laufende Intelligence.",
+    "intro": "Ihr müsst nicht mit einem großen Projekt starten.",
+    "fitLabel": "Ideal für",
+    "cta": "Dieses Format besprechen",
+    "items": [
+      { "title": "Signal Scan", "scope": "Fokussierter Research", "text": "Eine gezielte Analyse zu einer Frage, einem Markt oder einem Thema.", "fit": "Pitches, Kundenworkshops und erste Untersuchungen." },
+      { "title": "Deep Dive", "scope": "Individuelles Research-Projekt", "text": "Ein größeres Research-Projekt mit individueller Datenerhebung und Analyse.", "fit": "Strategieprojekte, Marktforschung und komplexe Kommunikationsfragen." },
+      { "title": "Continuous Intelligence", "scope": "Laufender Research", "text": "Fortlaufendes Monitoring und Analyse ausgewählter Signale, Plattformen, Wettbewerber oder Themen.", "fit": "Kontinuierlichen Überblick statt einer einmaligen Momentaufnahme." }
+    ]
+  },
+  "relationship": {
+    "kicker": "Hinter den Kulissen",
+    "heading": "Eure Kundenbeziehung",
+    "accent": "bleibt eure.",
+    "paragraphs": ["Wir können sichtbar mit eurem Team arbeiten oder vollständig im Hintergrund. Ihr bleibt der strategische Partner.", "dynamiq. liefert die Dateninfrastruktur, den Research und die Analyse hinter den Kulissen."],
+    "points": ["Keine Plattformbindung.", "Kein generisches Dashboard.", "Keine unnötige Ebene zwischen euch und eurem Kunden."],
+    "signature": "The source changes. The pipeline stays."
+  },
+  "contact": {
+    "label": "Research-Frage besprechen",
+    "heading": "Eine Kundenfrage,",
+    "accent": "die Daten braucht?",
+    "intro": "Schickt uns die Frage.",
+    "text": "Wir sagen euch, welche Daten sich realistisch erheben lassen, wie wir sie analysieren würden und wie ein passendes Projekt aussehen könnte.",
+    "help": "Beschreibt eure Research-Frage, relevante Märkte oder Quellen, euren Zeitplan und das gewünschte Ergebnis. Sagt uns auch, ob ihr eine White-Label-Umsetzung bevorzugt.",
+    "emailSubject": "Research-Frage für ein Agenturprojekt"
+  }
+}

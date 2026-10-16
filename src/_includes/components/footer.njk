@@ -4,7 +4,8 @@
   </a>
   <p>{{ ui.footerDescription }}</p>
   <a class="button button-light footer-cta" href="{% if contactPath %}{{ contactPath }}{% elif isHome %}#kontakt{% else %}{{ ui.homePath }}#kontakt{% endif %}">{{ contactLabel or ui.primaryCta }}</a>
-  <nav aria-label="{{ ui.legalNavLabel }}">
+  <nav aria-label="{{ ui.footerNavLabel }}">
+    <a href="{{ ui.agenciesPath }}">{{ ui.agenciesLabel }}</a>
     <a href="{{ ui.legalNoticePath }}">{{ ui.legalNotice }}</a>
     <a href="{{ ui.privacyPath }}">{{ ui.privacy }}</a>
   </nav>
