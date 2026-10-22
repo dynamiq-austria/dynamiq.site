@@ -7,14 +7,14 @@
             "display": "1.000h"
         },
         {
-            "label": "Texte/Transkripte analysiert",
-            "target": 30000,
-            "display": "30.000"
+            "label": "E-Mails analysiert",
+            "target": 400000,
+            "display": "400.000"
         },
         {
-            "label": "Websites ausgewertet",
-            "target": 10000,
-            "display": "10.000"
+            "label": "Websiten ausgewertet",
+            "target": 20000,
+            "display": "20.000"
         }
     ],
     "deliverables": [

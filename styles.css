@@ -343,7 +343,9 @@ select {
 }
 .poster-hero.is-draw-ready,
 .poster-hero.is-drawing {
-    cursor: url('/assets/pointer.png') 10 46, crosshair;
+    cursor:
+        url('/assets/pointer.png') 10 46,
+        crosshair;
 }
 @media (pointer: coarse) {
     .poster-hero {
@@ -734,7 +736,7 @@ select {
     order: -1;
     margin: 0;
     color: var(--purple-deep);
-    font-size: clamp(4rem, 6.8vw, 7.25rem);
+    font-size: clamp(2.75rem, 4.5vw, 5.5rem);
     font-weight: 800;
     font-variant-numeric: tabular-nums;
     letter-spacing: -0.085em;
@@ -1702,10 +1704,20 @@ select {
     animation: system-signal-travel 0.95s 0.12s ease-in-out both;
 }
 @keyframes system-signal-travel {
-    0% { opacity: 0; transform: translateX(0); }
-    12% { opacity: 1; }
-    88% { opacity: 1; }
-    100% { opacity: 0; transform: translateX(367px); }
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    12% {
+        opacity: 1;
+    }
+    88% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(367px);
+    }
 }
 .system-path--friction {
     opacity: 0.9;
@@ -2246,8 +2258,12 @@ select {
     overflow-y: auto;
     padding: clamp(2rem, 5vw, 4.5rem);
     color: var(--ink);
-    background:
-        linear-gradient(90deg, var(--paper) calc(100% - 5.5rem), var(--purple) calc(100% - 5.5rem), var(--purple) 100%);
+    background: linear-gradient(
+        90deg,
+        var(--paper) calc(100% - 5.5rem),
+        var(--purple) calc(100% - 5.5rem),
+        var(--purple) 100%
+    );
     border: 1px solid var(--ink);
     box-shadow: 12px 12px 0 var(--lilac);
 }
@@ -2527,8 +2543,7 @@ select {
     overflow: hidden;
     background:
         linear-gradient(90deg, transparent 49.8%, rgba(16, 16, 18, 0.16) 50%, transparent 50.2%),
-        linear-gradient(transparent 49.8%, rgba(16, 16, 18, 0.16) 50%, transparent 50.2%),
-        var(--lilac);
+        linear-gradient(transparent 49.8%, rgba(16, 16, 18, 0.16) 50%, transparent 50.2%), var(--lilac);
 }
 .team-card__placeholder::before {
     content: none;
@@ -2903,6 +2918,19 @@ select {
 }
 
 @media (max-width: 1080px) {
+    .impact-metrics__list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .impact-metrics__item:nth-child(odd) {
+        padding-left: 0;
+    }
+    .impact-metrics__item:nth-child(even) {
+        padding-right: 0;
+        border-right: 0;
+    }
+    .impact-metrics__item:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--ink);
+    }
     .site-header {
         grid-template-columns: 1fr auto auto;
     }
@@ -3763,9 +3791,15 @@ select {
     border-top: 1px solid rgba(244, 240, 233, 0.22);
     animation: monitoring-signal-arrive 0.7s both;
 }
-.monitoring-feed__entry:nth-child(2) { animation-delay: 0.2s; }
-.monitoring-feed__entry:nth-child(3) { animation-delay: 0.4s; }
-.monitoring-feed__entry:nth-child(4) { animation-delay: 0.6s; }
+.monitoring-feed__entry:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.monitoring-feed__entry:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.monitoring-feed__entry:nth-child(4) {
+    animation-delay: 0.6s;
+}
 .monitoring-feed__time,
 .monitoring-feed__source,
 .monitoring-feed__type {
@@ -3806,8 +3840,14 @@ select {
     font-size: 0.72rem;
 }
 @keyframes monitoring-signal-arrive {
-    from { opacity: 0; transform: translateY(0.6rem); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(0.6rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .monitoring-signal-list {
     list-style: none;
